@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>veracrypt</id>
+    <title>VeraCrypt</title>
+    <version>1.12</version>
+    <authors>IDRIX</authors>
+    <owners>Christian Heß-Grünig</owners>
+    <summary>VeraCrypt is a free disk encryption software that is based on TrueCrypt 7.1a.</summary>
+    <description>VeraCrypt adds enhanced security to the algorithms used for system and partitions
+        encryption making it immune to new developments in brute-force attacks.
+        VeraCrypt also solves many vulnerabilities and security issues found in TrueCrypt.
+        The following post describes some of the enhancements and corrections done:
+        https://veracrypt.codeplex.com/discussions/569777#PostContent_1313325</description>
+    <projectUrl>https://veracrypt.codeplex.com/</projectUrl>
+    <projectSourceUrl>https://veracrypt.codeplex.com/SourceControl/latest</projectSourceUrl>
+    <docsUrl>https://veracrypt.codeplex.com/documentation</docsUrl>
+    <bugTrackerUrl>https://veracrypt.codeplex.com/workitem/list/basic</bugTrackerUrl>
+    <tags>veracrypt truecrypt encryption security admin</tags>
+    <copyright></copyright>
+    <licenseUrl>https://veracrypt.codeplex.com/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/veracrypt.png</iconUrl>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
