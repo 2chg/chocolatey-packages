@@ -21,7 +21,7 @@
     <copyright></copyright>
     <licenseUrl>https://veracrypt.codeplex.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/veracrypt.png</iconUrl>-->
+    <iconUrl>https://cdn.rawgit.com/2chg/chocolatey-packages/veracrypt/veracrypt/assets/veraCrypt.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
