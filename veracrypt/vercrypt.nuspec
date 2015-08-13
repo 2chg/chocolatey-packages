@@ -4,15 +4,32 @@
   <metadata>
     <id>veracrypt</id>
     <title>VeraCrypt</title>
-    <version>1.12</version>
+    <version>1.13</version>
     <authors>IDRIX</authors>
     <owners>Christian Heß-Grünig</owners>
     <summary>VeraCrypt is a free disk encryption software that is based on TrueCrypt 7.1a.</summary>
-    <description>VeraCrypt adds enhanced security to the algorithms used for system and partitions
-        encryption making it immune to new developments in brute-force attacks.
-        VeraCrypt also solves many vulnerabilities and security issues found in TrueCrypt.
-        The following post describes some of the enhancements and corrections done:
-        https://veracrypt.codeplex.com/discussions/569777#PostContent_1313325</description>
+    <description>
+VeraCrypt adds enhanced security to the algorithms used for system and partitions
+encryption making it immune to new developments in brute-force attacks.
+VeraCrypt also solves many vulnerabilities and security issues found in TrueCrypt.
+The following post describes some of the enhancements and corrections done:
+[https://veracrypt.codeplex.com/discussions/569777#PostContent_1313325]()
+
+### Uninstallation
+
+This package contains *no* uninstallation script!
+
+Uninstallation can be achieved by using the
+[automatic Uninstaller](https://github.com/chocolatey/choco/wiki/CommandsUninstall)-Feature
+of chocolately.
+To activate this feature please run the following command:
+
+    choco feature enable -n autoUninstaller
+
+### Security
+
+This package verifies the downloaded installer via SHA1 checksum.
+</description>
     <projectUrl>https://veracrypt.codeplex.com/</projectUrl>
     <projectSourceUrl>https://veracrypt.codeplex.com/SourceControl/latest</projectSourceUrl>
     <docsUrl>https://veracrypt.codeplex.com/documentation</docsUrl>
