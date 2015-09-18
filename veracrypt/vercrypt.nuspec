@@ -38,7 +38,7 @@ This package verifies the downloaded installer via SHA1 checksum.
     <copyright></copyright>
     <licenseUrl>https://veracrypt.codeplex.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/2chg/chocolatey-packages/veracrypt/veracrypt/assets/veraCrypt.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/2chg/chocolatey-packages/master/veracrypt/assets/veraCrypt.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
