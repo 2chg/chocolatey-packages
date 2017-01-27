@@ -1,20 +1,20 @@
 ﻿# IMPORTANT: Before releasing this package, copy/paste the next 2 lines into PowerShell to remove all comments from this file:
-#   $f='c:\path\to\thisFile.ps1'
+#   $f='C:\Development\projects\chocolatey-packages\cryptomator\tools\chocolateyinstall.ps1'
 #   gc $f | ? {$_ -notmatch "^\s*#"} | % {$_ -replace '(^.*?)\s*?[^``]#.*','$1'} | Out-File $f+".~" -en utf8; mv -fo $f+".~" $f
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName= 'cryptomator' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = '' # download url, HTTPS preferred
-$url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url        = 'https://bintray.com/cryptomator/cryptomator/download_file?file_path=Cryptomator-1.2.3-x86.exe' # download url, HTTPS preferred
+$url64      = 'https://bintray.com/cryptomator/cryptomator/download_file?file_path=Cryptomator-1.2.3-x64.exe' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 #$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
+  fileType      = 'exe' #only one of these: exe, msi, msu
   url           = $url
   url64bit      = $url64
   #file         = $fileLocation
@@ -25,18 +25,18 @@ $packageArgs = @{
   # To determine checksums, you can get that from the original site if provided. 
   # You can also use checksum.exe (choco install checksum) and use it 
   # e.g. checksum -t sha256 -f path\to\file
-  checksum      = ''
+  checksum      = '9732168a48506353f0a9fb1fb01f5e70a5fa113eb47a05f04db05f4c8b6ffbbf'
   checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
-  checksum64    = ''
+  checksum64    = '2a375317a4850c42447e62bee623ed57f0187be029fac510aa36bbaecbdb9b66'
   checksumType64= 'sha256' #default is checksumType
 
   #MSI
-  silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
-  validExitCodes= @(0, 3010, 1641)
+  #silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
+  #validExitCodes= @(0, 3010, 1641)
   #OTHERS
   # Uncomment matching EXE type (sorted by most to least common)
   #silentArgs   = '/S'           # NSIS
-  #silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
+  silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
   #silentArgs   = '/s'           # InstallShield
   #silentArgs   = '/s /v"/qn"' # InstallShield with MSI
   #silentArgs   = '/s'           # Wise InstallMaster
@@ -46,7 +46,7 @@ $packageArgs = @{
   # Note that some installers, in addition to the silentArgs above, may also need assistance of AHK to achieve silence.
   #silentArgs   = ''             # none; make silent with input macro script like AutoHotKey (AHK)
                                  #       https://chocolatey.org/packages/autohotkey.portable
-  #validExitCodes= @(0) #please insert other valid exit codes here
+  validExitCodes= @(0) #please insert other valid exit codes here
 }
 
 Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
