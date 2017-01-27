@@ -39,7 +39,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Cryptomator Team and other Cryptomator committers</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://cryptomator.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/2chg/chocolatey-packages/9999999999999999999999999999999999999999/icons/cryptomator.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/2chg/chocolatey-packages/7689ae7a327a8b06a6099474cb9ba9d1e2cbc8b4/icons/cryptomator.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is is required for the community feed -->
     <licenseUrl>https://github.com/cryptomator/cryptomator/blob/master/LICENSES/MIT-X-Consortium-License.txt</licenseUrl>
